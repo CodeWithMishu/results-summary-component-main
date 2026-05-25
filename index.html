@@ -40,18 +40,55 @@
         background-color: hsl(0, 0%, 100%);
         height: auto;
         border-radius: 30px;
-        padding: 20px;
-        
+
         #result {
           border-radius: 30px;
           grid-area: result;
-          background-color: hsl(252, 100%, 67%);
+          background-color: hsl(241, 81%, 54%);
           padding: 20px;
+        }
+        #result h2 {
+          text-align: center;
+          color: #cdcbff;
+        }
+        #status {
+          display: flex;
+          justify-content: center;
+          justify-self: center;
+          align-items: center;
+          padding: 20px;
+          width: 60%;
+          height: auto;
+          /* border: 1px solid black; */
+          border-radius: 50%;
+          text-align: center;
+          background-color: hsla(241, 72%, 46%, 0.674);
+          box-shadow: inset 100px 100px 100px 55px rgba(0, 0, 0, 0.061);
+          & p {
+            color: #6e62ed;
+          }
+          & span {
+            color: hsl(0, 0%, 100%);
+            font-size: 5rem;
+            padding: 70px;
+          }
+        }
+        #result > p:nth-of-type(1) {
+          color: hsl(0, 0%, 100%);
+          font-size: 2rem;
+          font-weight: bolder;
+          text-align: center;
+        }
+        #result > p:nth-of-type(2) {
+          color: hsl(0, 0%, 100%);
+          color: #a29ddc;
+          text-align: center;
+          padding: 2px 58px 7px 58px;
         }
         #summary {
           grid-area: summary;
         }
-        grid-template-columns: 40% 40%;
+        grid-template-columns: 50% 45%;
         grid-template-areas: "result summary";
         justify-content: space-between;
       }
@@ -68,7 +105,9 @@
     <section id="dash">
       <div id="result">
         <h2>Your Result</h2>
-        <div id="status">76 of 100</div>
+        <div id="status">
+          <p><span>76</span> of 100</p>
+        </div>
         <p>Great</p>
         <p>
           You scored higher than 65% of the people who have taken these tests.
